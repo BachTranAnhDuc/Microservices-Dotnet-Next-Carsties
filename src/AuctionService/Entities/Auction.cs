@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http.Features;
-
-namespace AuctionService.Entities;
-
+﻿namespace AuctionService.Entities;
 public class Auction
 {
     public Guid Id { get; set; }
@@ -12,7 +9,7 @@ public class Auction
     public int? CurrentHighBid { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime AuctionEnd { get; set; }
     public Status Status { get; set; }
     public Item Item { get; set; }
-
 }
